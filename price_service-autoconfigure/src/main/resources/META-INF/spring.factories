@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mycompany.price_service.autoconfigure.ServicePriceAutoConfiguration

@@ -1,0 +1,497 @@
+{
+	"info": {
+		"name": "Flights",
+		"_postman_id": "24f43966-4bed-3e45-fbea-179f85f8d8ed",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add passenger 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Egor\",\n    \"lastName\": \"Dmitriev\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/passengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passengers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add passenger 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Kirill\",\n\t\"lastName\": \"Denisov\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/passengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passengers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add plane 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"planeNumber\":\"XY123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/planes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add plane 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"planeNumber\":\"X2Y123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/planes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add flight 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"flightNumber\": \"123qwz\",\n\t\"planes\":[\n\t\t{\n\t\t\t\"id\": 1\n\t\t\n\t\t},\n\t\t{\n\t\t\t\"id\": 2\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add ticket 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"30.11.2017 10:01\",\n    \"cost\": 100,\n    \"seat\": 1,\n    \"plane\": {\n        \"id\": \"1\"\n    },\n    \"passenger\": {\n    \t\"id\": \"1\"\t\n    },\n    \"flight\": {\n        \"id\": \"1\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add ticket 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"30.11.2017 10:01\",\n    \"cost\": 320.34,\n    \"seat\": 1,\n    \"plane\": {\n        \"id\": \"2\"\n    },\n    \"passenger\": {\n    \t\"id\": \"2\"\t\n    },\n    \"flight\": {\n        \"id\": \"1\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ticket 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/tickets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update ticket 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"date\": \"30.11.2017 12:01\",\n    \"cost\": 230.12,\n    \"seat\": 1,\n    \"plane\": {\n        \"id\": 1\n    },\n    \"passenger\": {\n        \"id\": 1\n    },\n    \"flight\": {\n        \"id\": 1\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete ticket 1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tickets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/tickets/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all planes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/planes/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planes",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get passengers with several tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/passengers/get-with-several-tickets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passengers",
+						"get-with-several-tickets",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get flights by plane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/flights/get-by-plane?plane-number=XY123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flights",
+						"get-by-plane"
+					],
+					"query": [
+						{
+							"key": "plane-number",
+							"value": "XY123",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get planes by passenger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/planes/get-by-passenger?first-name=Egor&last-name=Dmitriev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planes",
+						"get-by-passenger"
+					],
+					"query": [
+						{
+							"key": "first-name",
+							"value": "Egor",
+							"equals": true
+						},
+						{
+							"key": "last-name",
+							"value": "Dmitriev",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get tickets by passenger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/tickets/get-by-passenger?first-name=Egor&last-name=Dmitriev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"get-by-passenger"
+					],
+					"query": [
+						{
+							"key": "first-name",
+							"value": "Egor",
+							"equals": true
+						},
+						{
+							"key": "last-name",
+							"value": "Dmitriev",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "count passengers by flightNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/passengers/count-by-flight-number?flightNumber=123qwz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"passengers",
+						"count-by-flight-number"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "123qwz",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get average price of tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/tickets/get-average-price-of-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"get-average-price-of-tickets"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
